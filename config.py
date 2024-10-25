@@ -17,6 +17,8 @@ class Utilisateur:
         self.reservations = []             # Liste pour stocker les vols réservés par l'utilisateur
 
     def reserver_vol(self, vol):
+        if vol in self.reservations:
+            return f"{self.nom} a déjà une réservation sur le vol {vol.numero_vol}."
         if vol.nb_places_disponibles > 0:
             self.reservations.append(vol)
             vol.nb_places_disponibles -= 1
