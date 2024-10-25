@@ -1,2 +1,5 @@
-Reservation_ID,Email_utilisateur,Numero_vol
-a789b05c-4063-497e-97ef-186d7ddc9a99,alice@example.com,AF101
+ID_reservation,Email_utilisateur,Numero_vol
+362a9880-ff54-4adc-9952-c3808d0d1472,nico@example.com,AF112
+c4f35b10-ee74-43ce-9459-6ecc09626f58,paul@example.com,AF113
+a37a3b50-0757-4de3-be32-583a75577afd,paul@example.com,AF111
+403e9345-95f5-4a8b-84aa-3183054c5a11,marcotest@example.com,AF111
