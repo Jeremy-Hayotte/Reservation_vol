@@ -17,13 +17,19 @@ class Utilisateur:
         self.reservations = []             # Liste pour stocker les vols réservés par l'utilisateur
 
     def reserver_vol(self, vol):
+        # Vérification si le vol est déjà réservé
+        if vol in self.reservations:
+            print(f"{self.nom} a déjà réservé un siège sur le vol {vol.numero_vol}.")
+            return
+
+        # Vérification des places disponibles
         if vol.nb_places_disponibles > 0:
             self.reservations.append(vol)
             vol.nb_places_disponibles -= 1
             print(f"{self.nom} a réservé un siège sur le vol {vol.numero_vol}.")
         else:
             print(f"Aucune place disponible sur le vol {vol.numero_vol}.")
-
+            
     def annuler_reservation(self, vol):
         if vol in self.reservations:
             self.reservations.remove(vol)
